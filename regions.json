@@ -1,0 +1,130 @@
+{
+  "company": "ViewMe Tickets",
+  "version": "1.0.0",
+  "lastUpdated": "2026-04-20",
+  "headquarters": {
+    "primary": {
+      "city": "Beverly Hills",
+      "country": "USA",
+      "region": "North America"
+    },
+    "international": {
+      "city": "London",
+      "country": "UK",
+      "region": "Europe"
+    },
+    "european_ops": {
+      "city": "Amsterdam",
+      "country": "Netherlands",
+      "region": "Europe"
+    }
+  },
+  "regions": {
+    "north_america": {
+      "status": "active",
+      "countries": ["USA", "Canada", "Mexico"],
+      "primary_hubs": ["Beverly Hills, CA", "New York, NY", "Toronto, ON", "Mexico City"],
+      "venues_count": 55,
+      "cities": [
+        "New York", "Los Angeles", "Chicago", "Boston", "Philadelphia", 
+        "Washington DC", "Atlanta", "Miami", "San Francisco", "Seattle", 
+        "Portland", "Dallas", "Denver", "Nashville", "New Orleans", 
+        "Las Vegas", "Toronto", "Mexico City"
+      ]
+    },
+    "europe": {
+      "status": "active",
+      "countries": [
+        "UK", "Ireland", "Netherlands", "Belgium", "Germany", "France", 
+        "Spain", "Austria", "Switzerland", "Denmark", "Norway", "Finland", 
+        "Czech Republic", "Poland"
+      ],
+      "primary_hubs": ["London, UK", "Amsterdam, Netherlands"],
+      "venues_count": 8,
+      "cities": [
+        "London", "Manchester", "Birmingham", "Dublin", "Amsterdam", 
+        "Rotterdam", "Brussels", "Antwerp", "Berlin", "Munich", 
+        "Hamburg", "Frankfurt", "Paris", "Lyon", "Marseille", 
+        "Madrid", "Barcelona", "Vienna", "Zurich", "Geneva", 
+        "Copenhagen", "Oslo", "Helsinki", "Prague", "Warsaw"
+      ]
+    },
+    "oceania": {
+      "status": "active",
+      "countries": ["Australia"],
+      "primary_hubs": ["Sydney"],
+      "venues_count": 1,
+      "cities": ["Sydney", "Melbourne", "Brisbane"]
+    },
+    "latin_america": {
+      "status": "planned_q1_2026",
+      "countries": ["Brazil", "Argentina", "Chile", "Peru"],
+      "primary_hubs": ["São Paulo", "Buenos Aires"],
+      "venues_count": 0,
+      "cities": ["São Paulo", "Rio de Janeiro", "Buenos Aires", "Santiago", "Lima"]
+    },
+    "asia_pacific": {
+      "status": "planned_q2_2026",
+      "countries": ["Taiwan", "Singapore"],
+      "primary_hubs": ["Taipei", "Singapore"],
+      "venues_count": 0,
+      "cities": ["Taipei", "Singapore"]
+    },
+    "middle_east": {
+      "status": "planned_q3_2026",
+      "countries": ["UAE", "Saudi Arabia"],
+      "primary_hubs": ["Dubai", "Riyadh"],
+      "venues_count": 0,
+      "cities": ["Dubai", "Abu Dhabi", "Riyadh", "Jeddah"]
+    },
+    "africa": {
+      "status": "planned_q4_2026",
+      "countries": ["South Africa"],
+      "primary_hubs": ["Johannesburg"],
+      "venues_count": 0,
+      "cities": ["Johannesburg", "Cape Town", "Durban"]
+    }
+  },
+  "statistics": {
+    "total_countries": 30,
+    "active_countries": 4,
+    "total_venues": 67,
+    "full_data_venues": 45,
+    "primary_markets": ["North America", "Western Europe", "Australia"],
+    "emerging_markets": ["Latin America", "Asia Pacific", "Middle East", "Africa"]
+  },
+  "competitors": {
+    "ticketmaster": {
+      "countries": 30,
+      "venues": "1000+",
+      "api_available": true
+    },
+    "stubhub": {
+      "countries": 10,
+      "venues": "500+",
+      "api_available": true
+    }
+  },
+  "expansion_roadmap": {
+    "2024_q4": {
+      "focus": "North America launch",
+      "venues_target": 45
+    },
+    "2025_q1": {
+      "focus": "UK & Europe expansion",
+      "venues_target": 15
+    },
+    "2025_q2": {
+      "focus": "Australia & Asia Pacific",
+      "venues_target": 10
+    },
+    "2025_q3": {
+      "focus": "Latin America",
+      "venues_target": 8
+    },
+    "2025_q4": {
+      "focus": "Middle East & Africa",
+      "venues_target": 5
+    }
+  }
+}

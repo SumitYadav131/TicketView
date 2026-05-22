@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      width: 320px;
+      background: #0a0a1a;
+      color: white;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    
+    .header {
+      background: linear-gradient(135deg, #ff8c00 0%, #ff6b00 100%);
+      padding: 16px;
+      text-align: center;
+    }
+    
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    
+    .logo span {
+      font-size: 12px;
+      opacity: 0.9;
+    }
+    
+    .content {
+      padding: 16px;
+    }
+    
+    .stats {
+      background: #16213e;
+      border-radius: 12px;
+      padding: 12px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    
+    .stats-number {
+      font-size: 28px;
+      font-weight: bold;
+      color: #ff8c00;
+    }
+    
+    .stats-label {
+      font-size: 12px;
+      color: #aaa;
+    }
+    
+    .venue-list {
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    
+    .venue-item {
+      padding: 10px;
+      border-bottom: 1px solid #2a3a5a;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    
+    .venue-item:hover {
+      background: #16213e;
+    }
+    
+    .venue-name {
+      font-weight: 600;
+      font-size: 14px;
+    }
+    
+    .venue-location {
+      font-size: 11px;
+      color: #ff8c00;
+      margin-top: 4px;
+    }
+    
+    .status-badge {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+    
+    .status-full {
+      background: #4caf50;
+      box-shadow: 0 0 4px #4caf50;
+    }
+    
+    .status-partial {
+      background: #ff9800;
+    }
+    
+    .footer {
+      padding: 12px 16px;
+      background: #16213e;
+      font-size: 10px;
+      text-align: center;
+      color: #666;
+    }
+    
+    button {
+      background: #ff8c00;
+      border: none;
+      color: black;
+      padding: 8px 16px;
+      border-radius: 24px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 12px;
+    }
+    
+    button:hover {
+      background: #ffa01a;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">VIEWME <span>TICKETS</span></div>
+    <div style="font-size: 10px; margin-top: 4px;">See your exact seat view</div>
+  </div>
+  
+  <div class="content">
+    <div class="stats">
+      <div class="stats-number" id="venueCount">67</div>
+      <div class="stats-label">Venues with seat previews</div>
+    </div>
+    
+    <div style="font-size: 12px; margin-bottom: 8px;">🌍 Active Regions</div>
+    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+      <span style="background:#16213e; padding:4px 10px; border-radius:20px;">🇺🇸 USA</span>
+      <span style="background:#16213e; padding:4px 10px; border-radius:20px;">🇬🇧 UK</span>
+      <span style="background:#16213e; padding:4px 10px; border-radius:20px;">🇪🇺 Europe</span>
+      <span style="background:#16213e; padding:4px 10px; border-radius:20px;">🇦🇺 Australia</span>
+      <span style="background:#16213e; padding:4px 10px; border-radius:20px;">🇲🇽 Mexico</span>
+    </div>
+    
+    <div class="venue-list" id="venueList">
+      <!-- Populated by popup.js -->
+    </div>
+    
+    <button id="settingsBtn">⚙️ Settings</button>
+  </div>
+  
+  <div class="footer">
+    ViewMe Tickets v1.0 | See what you're buying
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

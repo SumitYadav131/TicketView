@@ -1,0 +1,53 @@
+{
+  "manifest_version": 3,
+  "name": "ViewMe Tickets - See Your Exact Seat View",
+  "version": "1.0.0",
+  "description": "See exactly what your view will look like before buying tickets. 3D seat previews for major venues.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.ticketmaster.com/*",
+    "*://*.stubhub.com/*",
+    "*://*.seatgeek.com/*",
+    "*://*.vividseats.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.ticketmaster.com/*",
+        "*://*.stubhub.com/*",
+        "*://*.seatgeek.com/*",
+        "*://*.vividseats.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["viewme-widget.html", "viewme-venues-db.json"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "ViewMe Tickets",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
