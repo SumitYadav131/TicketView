@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <title>ViewMe Admin Tool</title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        height: 100vh;
+        font-family: Arial;
+      }
+
+      #controls {
+        width: 300px;
+        background: #111;
+        color: white;
+        padding: 15px;
+      }
+
+      input,
+      button {
+        width: 100%;
+        margin: 5px 0;
+        padding: 8px;
+      }
+
+      #viewer {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="controls">
+      <h3>Seat Mapper</h3>
+
+      <input id="venue" placeholder="Venue name" value="msg" />
+      <input id="section" placeholder="Section" value="114" />
+      <input id="row" placeholder="Row" value="A" />
+
+      <button id="saveBtn">💾 Save Position</button>
+
+      <pre id="output"></pre>
+    </div>
+
+    <div id="viewer"></div>
+
+    <script type="module" src="./admin.js"></script>
+  </body>
+</html>

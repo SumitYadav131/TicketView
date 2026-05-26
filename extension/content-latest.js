@@ -106,8 +106,16 @@ let venueDB = {};
 
         const seatNum = element.getAttribute("data-seat-name") || element.getAttribute("data-seat");
 
-        const section = getSectionFromUI();
-        const row = getRowFromUI();
+        const aria = element.getAttribute("aria-label") || "";
+
+        // Example aria-label:
+        // "Section 114 Row A Seat 9 Price $120"
+
+        const sectionMatch = aria.match(/Section\s*(\d+)/i);
+        const rowMatch = aria.match(/Row\s*([A-Z]+)/i);
+
+        const section = sectionMatch ? sectionMatch[1] : "Unknown";
+        const row = rowMatch ? rowMatch[1] : "Unknown";
 
         const seatData = {
           venue,
